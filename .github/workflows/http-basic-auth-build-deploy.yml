@@ -38,7 +38,7 @@ jobs:
       - name: Build
         run: mvn -B package -file pom.xml
       - name: Artifact file name with commit hash
-        run: |       
+        run: |
           artifactName1=$(ls target/*.jar | head -1) 
           commitHash=$(git rev-parse -short "$GITHUB_SHA") 
           artifactName2=$(ls target/*.jar | head -1 | sed "s/.jar/.$commitHash.jar/g") 
