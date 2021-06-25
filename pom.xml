@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.3.0-20210427</app.runtime>
+		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.5.1</mule.maven.plugin.version>
 	</properties>
 
@@ -51,8 +51,8 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
+						<username>${secrets.username}</username>
+						<password>${secrets.password}</password>
 						<applicationName>${project.name}</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
