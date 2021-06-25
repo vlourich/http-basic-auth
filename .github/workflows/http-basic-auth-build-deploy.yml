@@ -63,7 +63,7 @@ jobs:
           name: artifacts    
       - name: Deploy to CloudHub      
         env:        
-          USERNAME: ${{ secrets.username }}       
+          USERNAME: ${{ secrets.username1 }}       
           PASSWORD: ${{ secrets.password }}      
         run: | 
           artifactName=$(ls *.jar | head -1)        
