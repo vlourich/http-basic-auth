@@ -19,7 +19,7 @@ Thumbs.db
 *.cache
 *.ilk
 *.log
-[Bb]in
+
 [Dd]ebug*/
 *.sbr
 obj/
@@ -31,6 +31,6 @@ _ReSharper*/
 packages/
 /.classpath
 /.project
-!target/
-target/*
-!target/*.jar
+
+target/
+
