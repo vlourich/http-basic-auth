@@ -51,8 +51,8 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
+						<username>${anypoint.userName}</username>
+						<password>${anypoint.password}</password>
 						<applicationName>http-basic-auth</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
