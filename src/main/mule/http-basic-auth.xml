@@ -23,5 +23,7 @@ http://www.mulesoft.org/schema/mule/spring http://www.mulesoft.org/schema/mule/s
 		    <http:basic-security-filter realm="mule" doc:id="a972ac43-cd34-4f0a-a4f8-a6e8d0f2bf9e"/>
       <spring:authorization-filter requiredAuthorities="ROLE_ADMIN" doc:id="64de0fab-6550-4ac3-b91c-543dd61a9a06" />
 		<logger level="INFO" doc:name="Logger" doc:id="daf5ab74-462b-491c-8792-b2b2b6f7b20e" message="Basic Authentication Successful"/>
-	</flow>
+		<logger level="INFO" doc:name="Logger" doc:id="ce51d413-4cab-401f-9cdc-9a6ce0a1db50" />
+	
+</flow>
 </mule>
