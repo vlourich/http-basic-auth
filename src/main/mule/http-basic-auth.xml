@@ -20,7 +20,7 @@ http://www.mulesoft.org/schema/mule/spring http://www.mulesoft.org/schema/mule/s
 		<http:listener doc:name="Listener" doc:id="bee69dfe-efaf-4502-9377-d45c67b4ff5c" config-ref="HTTP_Listener_config" path="/">
 			<ee:repeatable-file-store-stream />
 		</http:listener>
-		    <http:basic-security-filter realm="mule" />
+		    <http:basic-security-filter realm="mule" doc:id="a972ac43-cd34-4f0a-a4f8-a6e8d0f2bf9e"/>
       <spring:authorization-filter requiredAuthorities="ROLE_ADMIN" doc:id="64de0fab-6550-4ac3-b91c-543dd61a9a06" />
 		<logger level="INFO" doc:name="Logger" doc:id="daf5ab74-462b-491c-8792-b2b2b6f7b20e" message="Basic Authentication Successful"/>
 	</flow>
