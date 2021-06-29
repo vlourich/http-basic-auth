@@ -66,36 +66,7 @@
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>com.mulesoft.munit.tools</groupId>
-				<artifactId>munit-maven-plugin</artifactId>
-				<version>${munit.version}</version>
-				<executions>
-					<execution>
-						<id>test</id>
-						<phase>test</phase>
-						<goals>
-							<goal>test</goal>
-							<goal>coverage-report</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<runtimeVersion>4.0.0</runtimeVersion>
-					<coverage>
-						<runCoverage>true</runCoverage>
-						<failBuild>true</failBuild>
-						<requiredApplicationCoverage>0</requiredApplicationCoverage>
-						<requiredResourceCoverage>0</requiredResourceCoverage>
-						<requiredFlowCoverage>80</requiredFlowCoverage>
-						<formats>
-							<format>html</format>
-						</formats>
-						<ignoreFiles />
-						<ignoreFlows />
-					</coverage>
-				</configuration>
-			</plugin>
+			
 		</plugins>
 	</build>
 
