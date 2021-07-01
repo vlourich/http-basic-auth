@@ -42,7 +42,7 @@ jobs:
               {
                 "id": "MuleEE-Repository",
                 "username": "${env.SERVER_USERNAME}",
-                "password": "${env.SERVER_PASSWORD}",
+                "password": "${env.SERVER_PASSWORD}"
               }
             ]
           profiles: >
