@@ -50,7 +50,7 @@ jobs:
               {
                 "id": "MuleEE-Repository",
                 "name": "MuleEE-Repository",
-                "url": "https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/",
+                "url": "https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/"
               }
             ]    
       # Runs a single command using the runners shell
