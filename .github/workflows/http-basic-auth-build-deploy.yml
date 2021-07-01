@@ -43,7 +43,7 @@ jobs:
           #profiles: '[{ "id": "foo.profile", "name": "foo.profile", "url": "http://foo.bar.profile", "properties": { "foo": "property-1", "bar": "property-2"} }]'      
       # Runs a single command using the runners shell
       - name: Build
-        run: mvn -B package -file pom.xml
+      - run: mvn -B package -file pom.xml
       - name: Artifact file name with commit hash
         run: |
           artifactName1=$(ls target/*.jar | head -1) 
