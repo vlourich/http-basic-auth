@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="http-basic-auth-suite.xml" />
+	<munit:test name="http-basic-authFlow-test" doc:id="4550cba0-63e3-4a27-bb4f-9318021a7f6a" >
+		<munit:behavior >
+			<munit:set-event doc:name="Set Input" doc:id="ee54abf7-c451-468e-932d-dfdfe423c9b1" >
+				<munit:payload value="#[readUrl('classpath://httpbasicauthFlowtest\set-event_payload.dwl')]" encoding="UTF-8" />
+				<munit:attributes value="#[readUrl('classpath://httpbasicauthFlowtest\set-event_attributes.dwl')]" />
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to http-basic-authFlow" doc:id="db3a5f44-5300-4040-8d30-d70617d0793f" name="http-basic-authFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:verify-call doc:name="Verify Basic security filter" doc:id="6f6571a2-f6ab-4cfd-afb0-1bfa27184566" processor="http:basic-security-filter" times="1">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="64ac023e-dec4-4926-ae1d-a7c8177b6969" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+			</munit-tools:verify-call>
+			<munit-tools:verify-call doc:name="Verify Logger" doc:id="71401b2f-b133-4a43-8b31-9e2aa2df3080" processor="logger" times="1">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="daf5ab74-462b-491c-8792-b2b2b6f7b20e" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+			</munit-tools:verify-call>
+			<munit-tools:verify-call doc:name="Verify Authorization filter" doc:id="6b5b584f-b927-4f6b-bd53-ee399631fc4b" processor="spring:authorization-filter" times="1">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="64de0fab-6550-4ac3-b91c-543dd61a9a06" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+			</munit-tools:verify-call>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
