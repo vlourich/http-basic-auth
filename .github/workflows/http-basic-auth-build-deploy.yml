@@ -43,13 +43,6 @@ jobs:
                 "id": "MuleEE-Repository",
                 "username": "${env.SERVER_USERNAME}",
                 "password": "${env.SERVER_PASSWORD}",
-                "configuration": {
-                  "httpConfiguration": {
-                    "all": {
-                      "usePreemptive": "true"
-                    }
-                  }
-                }
               }
             ]
           profiles: >
