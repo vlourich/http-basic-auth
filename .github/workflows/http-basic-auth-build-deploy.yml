@@ -37,7 +37,14 @@ jobs:
       - name: maven-settings-xml-action
         uses: whelk-io/maven-settings-xml-action@v18
         with:
-          servers: '[{ "id": "MuleEE-Repository", "username": "${env.SERVER_USERNAME}", "password": "${env.SERVER_PASSWORD}" }]'
+          servers: | 
+            [
+              { 
+                "id": "MuleEE-Repository", 
+                "username": "${env.SERVER_USERNAME}", 
+                "password": "${env.SERVER_PASSWORD}"
+              }
+            ]
           profiles: >
             [
               {
